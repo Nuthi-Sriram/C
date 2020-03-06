@@ -9,7 +9,7 @@ inputs:
   build_command:
     description: 'cli command for building repository ex npm run build'
     required: true
-    default: ''
+    default: 'cc {$programname}'
   dist_path:
     description: 'output path for the build package'
     required: true
@@ -20,6 +20,7 @@ runs:
 outputs:
   size: # output will be available to future steps
     description: 'Build Size'
+    default: './a.out'
 branding:
   icon: 'hard-drive'
   color: 'blue'
